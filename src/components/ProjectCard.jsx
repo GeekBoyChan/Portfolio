@@ -7,7 +7,9 @@ const ProjectCard = ({ project }) => {
     <div className='projectCard'>
       <p className='projectTitle'>{title}</p>
       <p className='projectTech'>{tech}</p>
-      <p className='projectGit'>{gitLink}</p>
+      <a className='projectGit' href={gitLink}>
+        Visit GitHub Repository
+      </a>
       <p className='projectDescription'>{description}</p>
       <div className='projectPoints'>
         {points.map((point, i) => (
@@ -17,7 +19,11 @@ const ProjectCard = ({ project }) => {
         ))}
       </div>
 
-      {projectLink && <p className='projectLink'>{projectLink}</p>}
+      {projectLink && (
+        <a className='projectLink' href={projectLink}>
+          Visit Project Website
+        </a>
+      )}
     </div>
   );
 };
