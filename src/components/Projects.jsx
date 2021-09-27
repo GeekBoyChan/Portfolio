@@ -7,7 +7,9 @@ const Projects = () => {
   return (
     <div id='Projects'>
       <p className='title'>Projects</p>
-      <ProjectCard />
+      {ProjectInfo.map((project, i) => (
+        <ProjectCard key={i} project={project} />
+      ))}
     </div>
   );
 };

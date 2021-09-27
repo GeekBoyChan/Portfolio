@@ -1,13 +1,23 @@
 import React from 'react';
 
-const ProjectCard = () => {
+const ProjectCard = ({ project }) => {
+  const { title, description, tech, points, gitLink, projectLink } = project;
+  console.log(title, description, tech, points, gitLink, projectLink);
   return (
     <div className='projectCard'>
-      <p className='projectTitle'>Title</p>
-      <p className='projectTech'>Tech</p>
-      <p className='projectGit'>Git Link</p>
-      <p className='projectDescription'>discription</p>
-      <p className='projectPoints'>points</p>
+      <p className='projectTitle'>{title}</p>
+      <p className='projectTech'>{tech}</p>
+      <p className='projectGit'>{gitLink}</p>
+      <p className='projectDescription'>{description}</p>
+      <div className='projectPoints'>
+        {points.map((point, i) => (
+          <p className='point' key={i}>
+            {points}
+          </p>
+        ))}
+      </div>
+
+      {projectLink && <p className='projectLink'>{projectLink}</p>}
     </div>
   );
 };
