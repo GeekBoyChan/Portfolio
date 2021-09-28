@@ -8,18 +8,32 @@ class Projects extends React.Component {
     super();
     this.state = {
       projectInfo: ProjectInfo,
-      slectedCardIndex: undefined,
+      selectedCardIndex: undefined,
     };
+    this.tileSelectHandler = this.tileSelectHandler.bind(this);
+  }
+
+  tileSelectHandler(index) {
+    this.setState({ selectedCardIndex: index });
   }
 
   render() {
-    let { projectInfo } = this.state;
+    let { projectInfo, selectedCardIndex } = this.state;
+    // console.log(projectInfo);
     return (
       <div id='Projects'>
         <p className='title'>Projects</p>
         {ProjectInfo.map((project, i) => (
-          <ProjectTile key={i} project={project} />
+          <ProjectTile
+            key={i}
+            index={i}
+            project={project}
+            tileSelectHandler={this.tileSelectHandler}
+          />
         ))}
+        {(selectedCardIndex || selectedCardIndex === 0) && (
+          <ProjectCard project={projectInfo[selectedCardIndex]} />
+        )}
       </div>
     );
   }
