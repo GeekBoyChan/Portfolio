@@ -4,6 +4,7 @@ import React from 'react';
 const AppHeader = () => (
   <div id='AppHeader'>
     <div>Chandler Ocapan</div>
+    <div>Social Media goes here</div>
   </div>
 );
 

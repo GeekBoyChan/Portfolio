@@ -13,10 +13,10 @@ const AboutMe = () => {
           that moment, I decided to pursue a degree in Computer Engineering.
         </p>
         <p>
-          Fast-forward to today, I have a bachelor's degree in Computer
-          Engineering and further devloped my coding by completing a Software
-          Engineering immersive. I'm now looking to further develop my skills as
-          a professional Software Engineer.
+          Fast-forward to present day, I have a bachelor's degree in Computer
+          Engineering and have further devloped my coding by completing a
+          Software Engineering immersive. I'm now looking to further develop my
+          skills as a professional Software Engineer.
         </p>
       </div>
     </div>

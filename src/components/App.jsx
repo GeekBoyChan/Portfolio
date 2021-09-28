@@ -5,6 +5,7 @@ import Introduction from './Introduction.jsx';
 import SkillSet from './SkillSet.jsx';
 import AboutMe from './AboutMe.jsx';
 import Projects from './Projects.jsx';
+import '../ChandlerWebsite.scss';
 
 class App extends React.Component {
   constructor(props) {
@@ -14,12 +15,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id='App'>
+      <div id='AppContainer'>
         <AppHeader />
-        <Introduction />
-        <SkillSet />
-        <AboutMe />
-        <Projects />
+        <div id='AppBody'>
+          <Introduction />
+          <SkillSet />
+          <AboutMe />
+          <Projects />
+        </div>
       </div>
     );
   }
