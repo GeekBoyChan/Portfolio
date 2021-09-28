@@ -14,7 +14,7 @@ const ProjectCard = ({ project }) => {
       <div className='projectPoints'>
         {points.map((point, i) => (
           <p className='point' key={i}>
-            {points}
+            {point}
           </p>
         ))}
       </div>
