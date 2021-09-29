@@ -2,7 +2,7 @@ import React from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import ProjectTile from './ProjectTile.jsx';
 import ProjectCard from './ProjectCard.jsx';
-import ProjectInfo from '../ProjectInfo.js';
+import ProjectInfo from '../data/ProjectInfo.js';
 
 class Projects extends React.Component {
   constructor() {
@@ -37,7 +37,7 @@ class Projects extends React.Component {
             <CSSTransition
               appear={true}
               key={selectedCardIndex}
-              timeout={300}
+              timeout={450}
               classNames='fade'
             >
               <ProjectCard project={projectInfo[selectedCardIndex]} />
