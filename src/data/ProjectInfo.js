@@ -32,7 +32,7 @@ const ProjectInfo = [
     points: [
       'Implemented user access to IBM Watson API generated audio files by writing them within the server’s public directory and returning the file path of each audio file to use as a source for front-end audio constructors',
       'Collaborated with six other software engineers using agile practices in order to gauge team progress, maximize team proficiency and to ensure a smooth workflow',
-      'Conducted several client meetings to confirm that we were meeting spcified needs, while honing in on overall project scope',
+      'Conducted several client meetings to certify that specified needs were being met, while honing in on overall project scope',
     ],
     projectLink: 'https://pacificmicroph.one',
   },

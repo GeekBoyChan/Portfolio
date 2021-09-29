@@ -23,11 +23,19 @@ module.exports = {
         ],
       },
       {
-        test: /\.jsx?/,
+        test: /\.js$|jsx/,
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env', '@babel/preset-react'],
         },
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.pdf$/,
+        use: ['file-loader'],
       },
     ],
   },
