@@ -1,4 +1,5 @@
 import React from 'react';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import ProjectTile from './ProjectTile.jsx';
 import ProjectCard from './ProjectCard.jsx';
 import ProjectInfo from '../ProjectInfo.js';
@@ -18,7 +19,7 @@ class Projects extends React.Component {
   }
 
   render() {
-    let { projectInfo, selectedCardIndex } = this.state;
+    let { projectInfo, selectedCardIndex, cardAppear } = this.state;
     // console.log(projectInfo);
     return (
       <div id='Projects'>
@@ -32,7 +33,16 @@ class Projects extends React.Component {
           />
         ))}
         {(selectedCardIndex || selectedCardIndex === 0) && (
-          <ProjectCard project={projectInfo[selectedCardIndex]} />
+          <TransitionGroup>
+            <CSSTransition
+              appear={true}
+              key={selectedCardIndex}
+              timeout={300}
+              classNames='fade'
+            >
+              <ProjectCard project={projectInfo[selectedCardIndex]} />
+            </CSSTransition>
+          </TransitionGroup>
         )}
       </div>
     );
