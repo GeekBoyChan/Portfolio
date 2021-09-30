@@ -6,7 +6,7 @@ const AppHeader = () => (
   <div id='AppHeader'>
     <div>Chandler Ocapan</div>
     <div>Social Media goes here</div>
-    <a href={pdf} target='_blank'>
+    <a href={pdf} target='ChandlerOcapanResume'>
       Resume
     </a>
   </div>

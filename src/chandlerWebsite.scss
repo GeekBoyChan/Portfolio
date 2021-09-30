@@ -14,21 +14,42 @@
 
 #Projects {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto;
   grid-template-rows: auto auto auto;
+  margin: 20px;
 
   .title {
-    grid-column: 1/4;
     grid-row-start: 1;
     justify-self: center;
   }
 
   .projectCard {
-    grid-column-start: 2;
     grid-row-start: 3;
     align-content: center;
     justify-content: center;
   }
+}
+
+.projectTileContainer {
+  display: flex;
+  width: 90%;
+  margin: 5px auto;
+  gap: 5px;
+  justify-content: center;
+  grid-row-start: 2;
+}
+.projectTile {
+  width: 200px;
+  height: 300px;
+  background-color: grey;
+  margin: 0px 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.projectTile:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: green;
 }
 
 /*-----Animations-----*/

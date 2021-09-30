@@ -24,14 +24,17 @@ class Projects extends React.Component {
     return (
       <div id='Projects'>
         <p className='title'>Projects</p>
-        {ProjectInfo.map((project, i) => (
-          <ProjectTile
-            key={i}
-            index={i}
-            project={project}
-            tileSelectHandler={this.tileSelectHandler}
-          />
-        ))}
+        <div className='projectTileContainer'>
+          {ProjectInfo.map((project, i) => (
+            <ProjectTile
+              key={i}
+              index={i}
+              project={project}
+              tileSelectHandler={this.tileSelectHandler}
+            />
+          ))}
+        </div>
+
         {(selectedCardIndex || selectedCardIndex === 0) && (
           <TransitionGroup>
             <CSSTransition
