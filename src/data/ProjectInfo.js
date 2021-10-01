@@ -10,6 +10,7 @@ const ProjectInfo = [
       'Implemented a Features Comparison modal with the use of React Portals to render this component outside of its parent component DOM hierarchy to avoid CSS conflicts',
       'Utilized local storage properties to ensure persistence of the “Saved Outfit” feature, to allow the user to save favorited items without the use of a database',
     ],
+    picture: 'images/label.png',
   },
   {
     title: 'Rust API',
@@ -22,6 +23,7 @@ const ProjectInfo = [
       'Identified a 600 rps system bottleneck with Loader.io to increase robustness and availability of the server',
       'Utilized NGINX load balancers to horizontally scale the backend, increasing rps by 33%',
     ],
+    picture: 'images/database.png',
   },
   {
     title: 'Pacific Microphone',
@@ -34,6 +36,7 @@ const ProjectInfo = [
       'Collaborated with six other software engineers using agile practices in order to gauge team progress, maximize team proficiency and to ensure a smooth workflow',
       'Conducted several client meetings to certify that specified needs were being met, while honing in on overall project scope',
     ],
+    picture: 'images/microphone.png',
     projectLink: 'https://pacificmicroph.one',
   },
 ];
