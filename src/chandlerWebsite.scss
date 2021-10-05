@@ -1,26 +1,92 @@
 #AppBody {
+  position: absolute;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto auto;
-  justify-items: center;
+  grid-template-rows: 1000px 1000px 1000px 1000px;
+  width: 100%;
+  margin: 0;
 }
 
 #AppHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  height: 30px;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto auto auto;
   grid-template-rows: auto;
   justify-content: center;
+  background-color: #f2f2f2;
+
+  .navItem {
+    display: inline-block;
+  }
+}
+#Introduction {
+  background-color: #52ab98;
+  color: white;
+}
+
+#SkillSet {
+  background-color: #c8d8e4;
+  color: black;
+}
+
+#AboutMe {
+  background-color: #52ab98;
+  color: white;
 }
 
 #Projects {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto auto;
-  margin: 20px;
-
+  background-color: #c8d8e4;
+  color: black;
   .title {
     grid-row-start: 1;
     justify-self: center;
+  }
+
+  .projectTileContainer {
+    display: flex;
+    width: 90%;
+    margin: 5px auto;
+    gap: 5px;
+    justify-content: center;
+    grid-row-start: 2;
+  }
+  .projectTile {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    width: 200px;
+    height: 300px;
+    margin: 0px 10px;
+    background-color: #52ab98;
+    transition: 0.5s ease-in-out;
+
+    .tileTitle {
+      text-align: center;
+    }
+
+    .tilePicture {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .tileDescription {
+      text-align: center;
+    }
+  }
+
+  .projectTile:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: #338d79;
   }
 
   .projectCard {
@@ -28,28 +94,6 @@
     align-content: center;
     justify-content: center;
   }
-}
-
-.projectTileContainer {
-  display: flex;
-  width: 90%;
-  margin: 5px auto;
-  gap: 5px;
-  justify-content: center;
-  grid-row-start: 2;
-}
-.projectTile {
-  width: 200px;
-  height: 300px;
-  background-color: grey;
-  margin: 0px 10px;
-  transition: 0.5s ease-in-out;
-}
-
-.projectTile:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-  background-color: green;
 }
 
 /*-----Animations-----*/
