@@ -11,20 +11,26 @@ import '../ChandlerWebsite.scss';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { appear: true };
+    this.navScrollHandler = this.navScrollHandler.bind(this);
+  }
+
+  navScrollHandler(divId) {
+    const divElement = document.getElementById(divId);
+    const yOffSet = -15;
+    const y =
+      divElement.getBoundingClientRect().top + window.pageYOffset + yOffSet;
+
+    window.scrollTo({
+      top: y,
+      behavior: 'smooth',
+    });
   }
 
   render() {
-    const { appear } = this.state;
     return (
       <div id='AppContainer'>
-        <AppHeader />
-        <CSSTransition
-          in={appear}
-          appear={true}
-          timeout={300}
-          classNames='fade'
-        >
+        <AppHeader navScrollHandler={this.navScrollHandler} />
+        <CSSTransition in={true} appear={true} timeout={300} classNames='fade'>
           <div id='AppBody'>
             <Introduction />
             <SkillSet />
