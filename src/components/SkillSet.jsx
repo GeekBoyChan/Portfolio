@@ -3,7 +3,7 @@ import React from 'react';
 const SkillSet = () => {
   return (
     <div id='SkillSet'>
-      <p className='title'>Technical Skills</p>
+      <h3 className='title'>Technical Skills</h3>
       <p>
         Front-end: JavaScript, C#, React, ES6, HTML, CSS, Sass, React Styled
         Components, Axios
