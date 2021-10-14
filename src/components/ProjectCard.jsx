@@ -11,19 +11,19 @@ const ProjectCard = ({ project }) => {
     const { title, description, tech, points, gitLink, projectLink } = project;
     return (
       <div id='ProjectCard'>
-        <p className='projectTitle'>{title}</p>
+        <h4 className='projectTitle'>{title}</h4>
         <p className='projectTech'>{tech}</p>
         <a className='projectGit' href={gitLink}>
           Visit GitHub Repository
         </a>
         <p className='projectDescription'>{description}</p>
-        <div className='projectPoints'>
+        <ul className='projectPoints'>
           {points.map((point, i) => (
-            <p className='point' key={i}>
+            <li className='point' key={i}>
               {point}
-            </p>
+            </li>
           ))}
-        </div>
+        </ul>
 
         {projectLink && (
           <a className='projectLink' href={projectLink}>

@@ -9,8 +9,8 @@ const SkillSet = () => {
         Components, Axios
       </p>
       <p>
-        Node.js, Express, ASP.Net, MySQL, PostgreSQL, MongoDB, Mongoose, RESTful
-        API
+        Back-end: Node.js, Express, ASP.Net, MySQL, PostgreSQL, MongoDB,
+        Mongoose, RESTful API
       </p>
       <p>
         Testing/Tools: AWS, Mocha/Chai, Jest, Enzyme, Git, CircleCI, Webpack,
