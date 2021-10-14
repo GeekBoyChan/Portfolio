@@ -5,8 +5,8 @@ import ProjectCard from './ProjectCard.jsx';
 import ProjectInfo from '../data/ProjectInfo.js';
 
 class Projects extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       projectInfo: ProjectInfo,
       selectedCardIndex: undefined,
@@ -19,34 +19,34 @@ class Projects extends React.Component {
   }
 
   render() {
+    let { navScrollHandler } = this.props;
     let { projectInfo, selectedCardIndex, cardAppear } = this.state;
-    // console.log(projectInfo);
     return (
       <div id='Projects'>
-        <p className='title'>Projects</p>
+        <h3 className='title'>Projects</h3>
         <div className='projectTileContainer'>
           {ProjectInfo.map((project, i) => (
             <ProjectTile
               key={i}
               index={i}
               project={project}
+              selectedCardIndex={selectedCardIndex}
               tileSelectHandler={this.tileSelectHandler}
+              navScrollHandler={navScrollHandler}
             />
           ))}
         </div>
 
-        {(selectedCardIndex || selectedCardIndex === 0) && (
-          <TransitionGroup>
-            <CSSTransition
-              appear={true}
-              key={selectedCardIndex}
-              timeout={450}
-              classNames='fade'
-            >
-              <ProjectCard project={projectInfo[selectedCardIndex]} />
-            </CSSTransition>
-          </TransitionGroup>
-        )}
+        <TransitionGroup>
+          <CSSTransition
+            appear={true}
+            key={selectedCardIndex}
+            timeout={450}
+            classNames='fade'
+          >
+            <ProjectCard project={projectInfo[selectedCardIndex]} />
+          </CSSTransition>
+        </TransitionGroup>
       </div>
     );
   }

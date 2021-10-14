@@ -1,10 +1,12 @@
 import React from 'react';
+import IntroductionIcon from './IntroDuctionIcon.js';
 
 const Introduction = () => {
   return (
     <div id='Introduction'>
-      <p className='greeting'>Welcome!</p>
-      <p className='introBody'>I'm Chandler Ocapan, a Software Engineer</p>
+      <h1 className='greeting'>Welcome!</h1>
+      <h3 className='introBody'>I'm Chandler Ocapan, a Software Engineer</h3>
+      <IntroductionIcon />
     </div>
   );
 };

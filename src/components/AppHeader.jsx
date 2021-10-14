@@ -5,17 +5,27 @@ import pdf from '../data/ChandlerOcapanResume.pdf';
 
 const AppHeader = ({ navScrollHandler }) => (
   <div id='AppHeader'>
-    <div>Chandler Ocapan</div>
+    <div className='headerTitle'>Chandler Ocapan</div>
     <Navigation navScrollHandler={navScrollHandler} />
-    <a href='https://www.linkedin.com/in/cocapan/' target='_blank'>
-      <img src='images/linkedin.png'></img>
-    </a>
-    <a href='https://github.com/GeekBoyChan' target='_blank'>
-      <img src='images/github.png'></img>
-    </a>
-    <a href={pdf} target='ChandlerOcapanResume'>
-      Resume
-    </a>
+    <div className='headerLinks'>
+      <a
+        href='https://www.linkedin.com/in/cocapan/'
+        target='_blank'
+        className='headerIcon'
+      >
+        <img src='images/linkedin.png'></img>
+      </a>
+      <a
+        href='https://github.com/GeekBoyChan'
+        target='_blank'
+        className='headerIcon'
+      >
+        <img src='images/github.png'></img>
+      </a>
+      <a href={pdf} target='ChandlerOcapanResume' className='headerIcon'>
+        Resume
+      </a>
+    </div>
   </div>
 );
 

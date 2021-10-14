@@ -15,8 +15,9 @@ class App extends React.Component {
   }
 
   navScrollHandler(divId) {
+    console.log(divId);
     const divElement = document.getElementById(divId);
-    const yOffSet = -15;
+    const yOffSet = -40;
     const y =
       divElement.getBoundingClientRect().top + window.pageYOffset + yOffSet;
 
@@ -30,14 +31,12 @@ class App extends React.Component {
     return (
       <div id='AppContainer'>
         <AppHeader navScrollHandler={this.navScrollHandler} />
-        <CSSTransition in={true} appear={true} timeout={300} classNames='fade'>
-          <div id='AppBody'>
-            <Introduction />
-            <SkillSet />
-            <AboutMe />
-            <Projects />
-          </div>
-        </CSSTransition>
+        <div id='AppBody'>
+          <Introduction />
+          <SkillSet />
+          <AboutMe />
+          <Projects navScrollHandler={this.navScrollHandler} />
+        </div>
       </div>
     );
   }
