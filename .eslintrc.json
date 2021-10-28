@@ -17,7 +17,11 @@
     "sourceType": "module"
   },
   "plugins": ["react", "jsx-a11y", "import"],
-  "rules": {},
+  "rules": {
+    "indent": "off",
+    "react/jsx-indent": "off",
+    "react/jsx-indent-props": "off"
+  },
   "resolve": {
     "extensions": [".js", ".jsx"]
   }

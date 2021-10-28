@@ -23,7 +23,7 @@ class Projects extends React.Component {
     let { projectInfo, selectedCardIndex, cardAppear } = this.state;
     return (
       <div id='Projects'>
-        <h3 className='title'>Projects</h3>
+        <h1 className='title'>Projects</h1>
         <div className='projectTileContainer'>
           {ProjectInfo.map((project, i) => (
             <ProjectTile

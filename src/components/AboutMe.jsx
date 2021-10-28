@@ -3,7 +3,7 @@ import React from 'react';
 const AboutMe = () => {
   return (
     <div id='AboutMe'>
-      <h3 className='title'>About Me</h3>
+      <h1 className='title'>About Me</h1>
       <div className='narrative'>
         <p>
           Hello! My name is Chandler Ocapan. At a young age I was fascinated
