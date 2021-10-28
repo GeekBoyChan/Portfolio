@@ -40,24 +40,37 @@
   color: var(--textLight);
 
   .headerTitle {
-    margin-top: auto;
-    margin-bottom: auto;
-    text-align: center;
+    margin: auto 5px;
   }
 
   .navigation {
     margin: auto;
+
     .navItem {
-      display: inline-block;
+      float: left;
       padding: 10px;
+    }
+
+    .navItem:hover {
+      cursor: pointer;
+      color: var(--secondAccent);
     }
   }
   .headerLinks {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
     margin: auto;
-    .headerIcon {
+
+    .headerIcon,
+    .resume {
       margin-top: auto;
       margin-bottom: auto;
       text-align: center;
+    }
+
+    .resume {
+      height: 32px;
     }
   }
 }
@@ -82,13 +95,13 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto auto;
+  text-align: center;
   width: 100%;
   padding: 10px;
   color: var(--textLight);
 
   .title {
     grid-row-start: 1;
-    justify-self: center;
   }
 
   .projectTileContainer {
@@ -145,7 +158,7 @@
 #ProjectCard {
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-rows: 16px auto auto auto auto;
   grid-row-start: 3;
   margin: auto;
   padding: 10px;
@@ -213,6 +226,36 @@
   text-align: center;
   align-content: center;
   justify-content: center;
+}
+
+/*----Links----*/
+a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+a:link {
+  color: var(--secondAccent);
+  text-decoration: none;
+}
+
+a:hover,
+a:visited:hover {
+  color: var(--accent);
+  background-color: rgba(130, 249, 161, 0.07);
+}
+
+a:hover::after,
+a:visited::after {
+  background-color: rgb(222, 255, 231);
+  box-shadow: rgb(14 255 77 / 50%);
+  border-radius: 6px 0px 0px;
+}
+
+a:visited {
+  color: var(--secondAccent);
 }
 
 /*-----Animations-----*/
