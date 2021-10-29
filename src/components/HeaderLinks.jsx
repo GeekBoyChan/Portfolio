@@ -18,8 +18,9 @@ const HeaderLinks = () => {
       >
         <img src='images/github.png'></img>
       </a>
+
       <a href={pdf} target='ChandlerOcapanResume' className='resume'>
-        Resume
+        <button>Resume</button>
       </a>
     </div>
   );
