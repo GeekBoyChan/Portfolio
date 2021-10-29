@@ -16,8 +16,7 @@
   },
   "scripts": {
     "start": "node server/index.js",
-    "build": "webpack",
-    "web": "npm start"
+    "build": "webpack"
   },
   "author": "Chandler Ocapan",
   "license": "ISC",
