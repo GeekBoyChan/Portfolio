@@ -1,5 +1,5 @@
 import React from 'react';
-import IntroductionIcon from './IntroDuctionIcon.js';
+import IntroductionIcon from './IntroductionIcon.js';
 
 const Introduction = () => {
   return (
