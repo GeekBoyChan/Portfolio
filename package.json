@@ -15,10 +15,8 @@
     "extends": "airbnb"
   },
   "scripts": {
-    "test": "jest",
-    "build": "webpack -w ",
-    "start": "node server/index.js",
-    "lint": "./node_modules/.bin/eslint src/index.jsx"
+    "watch": "webpack -w ",
+    "start": "node server/index.js"
   },
   "author": "",
   "license": "ISC",
