@@ -1,5 +1,5 @@
 {
-  "name": "fec",
+  "name": "Portfolio",
   "jest": {
     "setupFilesAfterEnv": [
       "<rootDir>/tests/setup.js"
@@ -9,16 +9,16 @@
     ]
   },
   "version": "1.0.0",
-  "description": "Our Hack Reactor FEC project",
+  "description": "Portfolio for Chandler Ocapan",
   "main": "index.js",
   "eslintConfig": {
     "extends": "airbnb"
   },
   "scripts": {
-    "watch": "webpack -w ",
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "build": "webpack"
   },
-  "author": "",
+  "author": "Chandler Ocapan",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.13.1",
