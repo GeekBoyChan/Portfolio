@@ -6,7 +6,7 @@ import Introduction from './Introduction.jsx';
 import SkillSet from './SkillSet.jsx';
 import AboutMe from './AboutMe.jsx';
 import Projects from './Projects.jsx';
-import '../ChandlerWebsite.scss';
+import '../chandlerWebsite.scss';
 
 class App extends React.Component {
   constructor(props) {
