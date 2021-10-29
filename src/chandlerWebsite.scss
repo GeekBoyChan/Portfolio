@@ -16,6 +16,7 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto auto auto;
+  grid-gap: 50px;
   width: 100%;
   left: 0;
   background-color: var(--main);
@@ -56,11 +57,13 @@
       color: var(--secondAccent);
     }
   }
+
   .headerLinks {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto;
-    margin: auto;
+    margin: auto 5px;
+    justify-self: end;
 
     .headerIcon,
     .resume {
@@ -289,9 +292,13 @@ button:hover::after {
   border-radius: 6px 0px 0px;
 }
 
+.headerIcon {
+  background-color: var(--textLight);
+  border-radius: 5px;
+}
+
 .headerIcon:hover {
   background-color: var(--secondAccent);
-  border-radius: 5px;
 }
 
 a:visited {
@@ -305,6 +312,10 @@ button {
   border-radius: 6px;
   height: 32px;
   width: 60px;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 /*-----Animations-----*/
